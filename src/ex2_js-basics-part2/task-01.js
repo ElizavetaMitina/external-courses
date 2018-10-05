@@ -1,3 +1,4 @@
+'use strict';
 function type (x){
     var y;
     if (typeof x === "number" || typeof x === "string"){
