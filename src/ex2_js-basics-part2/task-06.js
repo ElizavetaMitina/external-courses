@@ -14,5 +14,6 @@ function composite(number) {
     }else if (composition === false){
         return ('Число ' + number + ' - простое число')
     }
+    return '';
 }
 module.exports = composite;
