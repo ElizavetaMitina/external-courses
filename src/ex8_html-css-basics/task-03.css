@@ -1,0 +1,36 @@
+div{
+    margin: 10px;
+}
+#First{
+    background-color: antiquewhite;
+    border: 2px solid rosybrown;
+}
+#Second{
+    background-color: aquamarine;
+    outline: 2px solid blue;
+}
+#Trird{
+    background-color: darkkhaki;
+    box-shadow: 0 0 0 2px saddlebrown;
+}
+#Forth{background-color: chartreuse}
+#Forth::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 222px;
+    left: 16px;
+    height: 58px;
+    width: 1334px;
+    background-color: green;
+}
+#Fifth{
+    margin: 0;
+    background-color: fuchsia;
+}
+#wrap{
+    padding: 2px;
+    height: 55px;
+    width: 1330px;
+    background-color: darkmagenta;
+}
