@@ -1,7 +1,7 @@
 'use strict';
 function cloneDeep(object) {
     if (typeof object !== "object" || Array.isArray(object)){
-        return object;
+        return object.slice(0);
     }
     let copy = {};
     for (let key in object) {
