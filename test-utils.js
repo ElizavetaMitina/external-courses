@@ -39,6 +39,20 @@ module.exports = (exerciseName, read = false, taskExt = 'js') => {
         css: markup => done => {
             const compressedHTML = markup.replace(/\s/g, ' ');
             const styleTag = findStringBetween(compressedHTML, '<style>', '</style>')[0] || '';
+            const hrefs = findStringBetween(compressedHTML, '<link', '>').reduce((hrefs, currentHref) => {
+                if (~currentHref.indexOf('.css') && !~currentHref.indexOf('http')) {
+                    const validLink = findStringBetween(currentHref, 'href=("|\')', '.css')[0];
+                    if (validLink) {
+                        hrefs.push(`${validLink}.css`);
+                    }
+                }
+
+                return hrefs;
+            }, []);
+
+            const bundle = [
+                styleTag,
+                ...hrefs.map(href => readFileSync(`${dirWithTask}/${href}`, 'utf-8')),
             ].join('');
 
             validateCSS({text: bundle}, (error, res) => {
@@ -64,7 +78,8 @@ module.exports = (exerciseName, read = false, taskExt = 'js') => {
 };
 
 const findStringBetween = (str, first, last) => {
-
+    const matched = str.match(new RegExp(first + '(.*?)' + last, 'gm')) || [];
+    return matched.map(s => s.replace(new RegExp(first), '').replace(new RegExp(last), ''));
 };
 
 const readCode = absolutePath => {
