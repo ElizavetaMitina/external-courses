@@ -1,0 +1,26 @@
+div{
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 25%;
+    height: 210px;
+    width: 410px;
+}
+#img{
+    background-image: url("owl.jpg");
+    background-size: contain;
+    padding: 40px;
+    color: bisque;
+    font-size: 25px;
+    border: 2px solid crimson;
+}
+#color{
+    height: 150px;
+    background-color: bisque;
+    vertical-align: center;
+    margin: 0 24%;
+    box-shadow: 5px 3px 3px 3px rosybrown;
+    border-radius: 10px;
+    font-family: Broadway, italic;
+    font-size: 2em;
+    padding: 50px;
+}
