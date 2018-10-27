@@ -1,0 +1,43 @@
+div{
+    height: 200px;
+    width: 400px;
+    background-color: rgb(96, 185, 141);
+}
+#shadow{
+    box-shadow: 5px 5px 0 0 #90cdaf,
+    10px 10px 0 0 #c7e6d7;
+}
+#div1{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: #90cdaf;
+    z-index: -1;
+}
+#div2{
+    position: relative;
+    top: -190px;
+    left: 10px;
+    background-color: #c7e6d7;
+    z-index: -2;
+}
+#pseudo::before{
+    content: '';
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: #90cdaf;
+    z-index: -1;
+}
+#pseudo::after{
+    content: '';
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #c7e6d7;
+    z-index: -2;
+}
