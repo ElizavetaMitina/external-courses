@@ -1,0 +1,32 @@
+div{
+    text-align: center;
+    font-size: 20px;
+    height: 210px;
+    width: 410px;
+}
+#img{
+    background-image: url("owl.jpg");
+    background-size: contain;
+    border: 2px solid crimson;
+}
+#color{
+    height: auto;
+    background-color: bisque;
+    vertical-align: center;
+    box-shadow: 5px 3px 3px 3px rosybrown;
+    border-radius: 10px;
+    font-family: MoolBoran;
+    padding: 20px;
+}
+#second{
+    font-size: 2em;
+}
+#third{
+    font-size: 3em;
+}
+#firr{
+    font-size: 2rem;
+}
+#secc{
+    font-size: 3rem;
+}
