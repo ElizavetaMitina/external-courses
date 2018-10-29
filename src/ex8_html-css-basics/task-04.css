@@ -10,7 +10,7 @@ div{
     background-size: contain;
     padding: 40px;
     color: bisque;
-    font-size: 25px;
+    font-size: 15px;
     border: 2px solid crimson;
 }
 #color{
@@ -20,7 +20,18 @@ div{
     margin: 0 24%;
     box-shadow: 5px 3px 3px 3px rosybrown;
     border-radius: 10px;
-    font-family: Broadway, italic;
+    font-family: MoolBoran;
+    padding: 70px;
+}
+#second{
     font-size: 2em;
-    padding: 50px;
+}
+#third{
+    font-size: 3em;
+}
+#firr{
+    font-size: 2rem;
+}
+#secc{
+    font-size: 3rem;
 }
