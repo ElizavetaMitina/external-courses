@@ -1,0 +1,58 @@
+body{
+    padding: 20px 40px;
+}
+.warning{
+    color: red;
+}
+#grid-container{
+    display: grid;
+    grid-template: 1fr 1fr 1fr 3fr / 7% 25% 30%;
+}
+input{
+    height: 30px;
+    align-self: center;
+    border-radius: 6px;
+    border: 1px solid black;
+}
+textarea{
+    border-radius: 6px;
+    border: 1px solid black;
+    height: 90px;
+    margin-top: 10px;
+}
+input[type = "submit"]{
+    height: 30px;
+    width: 120px;
+    background-color: #eaeaea;
+}
+.hint{
+    background-color: red;
+    color: white;
+    border-radius: 3px 3px 3px 3px;
+    margin-left: 40px;
+    padding: 5px 0 0 0 ;
+    height: 30px;
+    text-align: center;
+    align-self: center;
+    visibility: hidden;
+}
+.hint::before{
+    content: '';
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 3px;
+    background-color: red;
+    width: 20px; height: 20px;
+    transform: rotate(45deg);
+}
+.hint:nth-of-type(2)::before{
+    margin-left: -103px;
+}
+.hint:nth-of-type(3)::before{
+    margin-left: -107px;
+}
+form input:required:invalid:focus + .hint { visibility: visible}
+form input:required:invalid:focus + .hint::before {visibility: visible}
+form input:required:valid:focus + .hint {background: greenyellow; visibility: visible}
+form input:required:valid:focus + .hint::before {background: greenyellow; visibility: visible}
+form input:required:valid:focus + .hint {color: black;}

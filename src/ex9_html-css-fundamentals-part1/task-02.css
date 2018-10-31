@@ -1,0 +1,28 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+span{
+    margin: 0;
+    visibility: hidden;
+    display: block;
+    font-size: 40px;
+    color: red;
+    text-align: center;
+}
+label{
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+input{
+    display: none;
+}
+input:checked~span{
+    visibility: visible;
+}
