@@ -45,6 +45,12 @@ input[type = "submit"]{
     width: 20px; height: 20px;
     transform: rotate(45deg);
 }
+.hint:nth-of-type(2)::before{
+    margin-left: -108px;
+}
+.hint:nth-of-type(3)::before{
+    margin-left: -110px;
+}
 form input:required:invalid:focus + .hint { visibility: visible}
 form input:required:invalid:focus + .hint::before {visibility: visible}
 form input:required:valid:focus + .hint {background: greenyellow; visibility: visible}
