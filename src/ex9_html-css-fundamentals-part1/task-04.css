@@ -39,17 +39,17 @@ input[type = "submit"]{
 .hint::before{
     content: '';
     position: absolute;
-    margin-left: -105px;
+    margin-left: -100px;
     margin-top: 3px;
     background-color: red;
     width: 20px; height: 20px;
     transform: rotate(45deg);
 }
 .hint:nth-of-type(2)::before{
-    margin-left: -108px;
+    margin-left: -103px;
 }
 .hint:nth-of-type(3)::before{
-    margin-left: -110px;
+    margin-left: -107px;
 }
 form input:required:invalid:focus + .hint { visibility: visible}
 form input:required:invalid:focus + .hint::before {visibility: visible}
