@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="task-01.css">
+</head>
+<body>
+<ul>
+    <li><a href="https://www.google.ru/?hl=ru">Searching</a></li>
+    <li><a href="https://www.youtube.com/?gl=RU&hl=ru">YouTube</a></li>
+    <li><a href="https://www.card.com/">Card</a></li>
+    <li><a href="https://play.google.com/store?hl=ru">Play</a></li>
+    <li><a href="https://news.google.com/news/?ned=in&gl=IN&hl=en-IN">News</a></li>
+    <li><a href="https://mail.ru/">Mail</a></li>
+</ul>
+<ol start="7">
+    <li>Searching</li>
+    <li>Card</li>
+    <li>Market</li>
+    <li>News</li>
+    <li>Dictionaries</li>
+    <li>Pictures</li>
+    <li>Yet</li>
+    <li>
+    <ul>
+        <li>Flights</li>
+        <li>Auto</li>
+        <li>Poster</li>
+        <li>Blogs</li>
+    </ul>
+    </li>
+</ol>
+<i>Tag</i>
+<p>element of Hypertext Markup Language</p>
+<i>The Semantic Web</i>
+<p>This direction of development of the World Wide Web, the aim of which is to provide information in a form suitable for machine processing</p>
+<hr>
+<table>
+    <caption>CSS Generated content for pseudo-elements</caption>
+    <thead>
+    <tr>
+        <th>IE</th>
+        <th>Firefox</th>
+        <th>Chrome</th>
+        <th>Safari</th>
+        <th>Opera</th>
+        <th>iOS Safari</th>
+        <th>Opera Mini</th>
+        <th>Android Browser</th>
+        <th>Chrome for Android</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="2"></td>
+        <td rowspan="4"></td>
+        <td>27</td>
+        <td rowspan="3"></td>
+        <td rowspan="5"></td>
+        <td rowspan="4"></td>
+        <td rowspan="5"></td>
+        <td></td>
+        <td rowspan="5"></td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>2.3</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>33</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>34</td>
+        <td>5.1</td>
+        <td>4.1</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>thirty</td>
+        <td>35</td>
+        <td>6.1</td>
+        <td>6.1</td>
+        <td>4.3</td>
+    </tr>
+    <tr>
+        <td>eleven</td>
+        <td>31</td>
+        <td>36</td>
+        <td>7</td>
+        <td>23</td>
+        <td>7.1</td>
+        <td>7</td>
+        <td>4.4</td>
+        <td>36</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="9">Method of displaying text images before or after the given element's contents using the: before and after pseudo-elements</td>
+    </tr>
+    </tfoot>
+</table>
+<hr>
+<form action="http://httpbin.org/post" method="post">
+    <fieldset>
+        <legend>Personal data</legend>
+        Surname
+        <input type="text" name="surname" title="Please, enter your surname">
+        <br>
+        <br>
+        First Name
+        <input type="text" name="firstname" title="Please, enter your first name">
+        <br>
+        <br>
+        Middle name
+        <input type="text" name="middlename" title="Please, enter your middlename">
+        <br>
+        <br>
+        You are
+        <input type="radio" name="sex" value="male" checked title="Please, choose your sex">male
+        <input type="radio" name="sex" value="female" title="Please, choose your sex">female
+        <br>
+        <br>
+        Age
+        <input type="number" name="age" min="18" max="101" title="Please, enter your age">
+        <br>
+        <br>
+        Country of Residence
+        <input list="countries" title="Please, choose your country">
+        <datalist id="countries">
+            <option value="Russia"></option>
+            <option value="Ukraine"></option>
+            <option value="France"></option>
+            <option value="UK"></option>
+            <option value="Japan"></option>
+            <option value="China"></option>
+        </datalist>
+        <br>
+        <br>
+        City
+        <input type="checkbox" name="city" value="ryazan" title="Click it, if your city is Ryazan">Ryazan
+        <input type="checkbox" name="city" value="moscow" title="Click it, if your city is Moscow">Moscow
+        <br>
+        <br>
+        Photography
+        <input type="file" name="img" multiple accept="image/png,image/jpeg">
+        <hr>
+        <br>
+        Title
+        <select name="techno" multiple id="tech" title="tecnologies">
+            <option class="technologies">Technologies</option>
+            <option class="web">Web master</option>
+            <option class="web">Database Administrator</option>
+            <option class="web">Computer-aided design</option>
+            <option class="technologies">Finance</option>
+            <option class="web">Econimic Planning</option>
+            <option class="web">Management accounting</option>
+            <option class="web">Budgeting and planning</option>
+        </select>
+        <br>
+        Salary
+        <input type="range" min="0" max="100" step="5" title="range">
+        <br>
+        <textarea id="info" placeholder="Tell us about yourself..."></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Contact Information</legend>
+        <br>
+        Site
+        <input type="text" name="site" title="Please, enter your site">
+        <br>
+        <br>
+        Email
+        <input type="text" name="email" title="Please, enter your email">
+        <br>
+        <br>
+        Phone
+        <input type="text" name="phone" pattern="7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Please, enter your phone">
+        <br>
+        <br>
+    </fieldset>
+    <br>
+    Password
+    <input type="password" required title="Please, enter your password">
+    <br>
+    <br>
+    <input type="submit">
+    <input type="reset">
+</form>
+</body>
+</html>
