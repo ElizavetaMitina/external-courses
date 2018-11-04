@@ -1,0 +1,25 @@
+button{
+    margin: 7px;
+    height: 70px;
+    width: 300px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 0 0 4px white;
+    color: #505050;
+    border-radius: 15px;
+    background-image: linear-gradient(to top, rgb(173, 173, 173), rgb(227, 227, 227));
+    box-shadow: 0 3px 5px 1px #6a6a6a;
+    border: 1px solid rgb(173, 173, 173);
+}
+div{
+    margin: 20px;
+    background-color: rgb(227, 227, 227);
+    height: 85px;
+    width: 315px;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #6a6a6a;
+}
+.icon-star-filled {
+    color: rgb(136, 136, 136);
+}
