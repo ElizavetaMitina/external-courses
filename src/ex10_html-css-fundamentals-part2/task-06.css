@@ -1,0 +1,24 @@
+ul li{
+    display: inline;
+    padding: 0 10px;
+    font-size: x-large;
+}
+li:nth-child(1){
+    border-right: solid 2px red;
+    margin-right: 10px;
+}
+li:nth-child(2){
+    border-right: solid 2px red;
+    padding: 0 10px 0 0 ;
+}
+a{
+    text-decoration: none;
+}
+li:nth-child(2):hover{
+    border-bottom: solid 4px blue;
+    border-right: none;
+    padding: 0 20px 0 0 ;
+}
+li:nth-child(2):hover~li:nth-child(3){
+    padding: 0 0 0 2px;
+}

@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Calibri,  Arial;
+    color: #747474;
+}
+*{
+    box-sizing: border-box;
+}
+#main{
+    width: 100%;
+    height: 1000px;
+    background-image: url("bg-iback.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#header, #sidebar, #nav, #searching{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#searching{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#header{
+    padding-top: 2rem;
+    align-items: center;
+}
+#logo{
+    font-size: 2.5rem;
+    color: #00adb0;
+}
+.icon{
+    padding: 0 1rem;
+}
+.icon:nth-of-type(1), .icon:nth-of-type(2){
+    border-right: 0.05rem solid #aeaeae;
+}
+.info{
+    border: 1px solid #aeaeae;
+    padding: 1px 15px;
+    position: absolute;
+    margin: -2.2rem 0 0 -0.6rem;
+    visibility: hidden;
+}
+.info::before{
+    content: '';
+    background-image: linear-gradient(to top left, white 50%, transparent 50%);
+    position: absolute;
+    margin: 12px 0 0 -11px;
+    height: 1rem;
+    width: 1rem;
+    z-index: 2;
+    transform: rotate(45deg);
+    border-bottom: 1px solid #aeaeae;
+    border-right: 1px solid #aeaeae;
+}
+#second{
+    margin: -2.2rem 0 0 -3rem;
+}
+#second::before{
+    margin: 12px 0 0 27px;
+}
+#third{
+    margin: -2.2rem 0 0 -5.2rem;
+}
+#third::before{
+    margin: 12px 0 0 67px;
+}
+.icon:hover{
+    color: #00adb0;
+}
+.icon:hover .info{
+    visibility: visible;
+    color: #747474;
+}
+#sidebar{
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+#sidebar{
+    width: 100%;
+    border-top: 1px solid #cccccc;
+}
+#items{
+    justify-content: space-between;
+    width: 50%;
+}
+.item{
+    padding: 1.5% 1%;
+    border-right: 0.05rem solid #cccccc;
+}
+.item:nth-of-type(6){
+    border: none;
+}
+.arrow{
+    content: '';
+    height: 0;
+    width: 0;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #10a0c5;
+    position: absolute;
+    margin: 15px 0 0 5px;
+    z-index: 2;
+    visibility: hidden;
+}
+.item:hover .arrow{
+    visibility: visible;
+}
+#searching{
+    float: right;
+    margin-top: -30px;
+    align-self: center;
+    flex-wrap: nowrap;
+}
+button[type=submit]{
+    background-color: white;
+    border: 0;
+}
+input{
+    border: none;
+    margin-bottom: 1px;
+}
+#slogan{
+    display: flex;
+    padding: 12% 0 8% 0;
+    align-items: center;
+    flex-direction: column;
+}
+#slogan span:nth-of-type(1){
+    font-size: 2.6rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 2;
+    margin-left: -70px;
+}
+#slogan span:nth-of-type(2){
+    position: absolute;
+    margin-left: -220px;
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(16, 160, 197, 0.49);
+}
+#slogan span:nth-of-type(3){
+    padding-left: 50px;
+    color: white;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+#wrap{
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: auto;
+}
+#photos{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.photo{
+    height: 143px;
+    width: 190px;
+    background-size: contain;
+}
+.photo:nth-of-type(1){
+    background-image: url("img1.jpg");
+}
+.photo:nth-of-type(2){
+    background-image: url("img2.jpg");
+}
+#pointer{
+    background-color: #eeeeee;
+    height: 143px;
+    width: 70px;
+}
+#pointer::before{
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    margin: 60px 0 0 20px;
+    z-index: 100000;
+    transform: rotate(45deg);
+    border-top: 2px solid #9b9b9b;
+    border-right: 2px solid #9b9b9b;
+}
+#articles{
+    margin: 8% -2% 0 -2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    text-align: justify;
+    flex-basis: 100%;
+    margin: 0 2%;
+}
+.text p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.text span{
+    font-size: 0.8rem;
+}
+input[type="checkbox"],label{
+    display: none;
+}
+@media screen and (max-width: 910px){
+    #nav, .arrow, #photos{
+        display: none;
+    }
+    #searching{
+        position:absolute;
+        margin-left: 70%;
+        top: 20%;
+    }
+    .item{border: none}
+    #sidebar{
+        display: none;
+        border: none;
+        justify-content: space-between;
+    }
+    label{
+        display: block;
+        font-size: 2rem;
+    }
+    #menu:checked~#sidebar, #articles{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
