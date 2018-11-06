@@ -21,3 +21,12 @@ tfoot{
 div{
     background-color: #eee;
 }
+iframe[name="myframe1"]{
+    visibility: hidden;
+    position: absolute;
+    top: 74px;
+    left: 318px;
+}
+a[href="menu.html"]:visited ~ iframe[name="myframe1"]{
+    visibility: visible;
+}
