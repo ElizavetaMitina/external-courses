@@ -1,0 +1,88 @@
+#loader{
+    margin: 50px;
+    height: 40px;
+    width: 40px;
+    background-color: darkturquoise;
+    animation: load 2.5s ease-out infinite;
+}
+@keyframes load{
+    from{
+        border-radius: 50%;
+    }
+    50%{
+        transform: rotate(180deg);
+        background-color: #0fa0c4;
+        border-radius: 0;
+    }
+    to{
+        border-radius: 50%;
+    }
+}
+#wrap{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.block{
+    height: 80px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: darksalmon;
+}
+#round{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: crimson;
+    margin: 0 40px;
+    animation: bounce 1s linear infinite;
+    align-self: center;
+}
+@keyframes bounce {
+    from{
+        margin-left: 0;
+        margin-right: 80px;
+    }
+    50%{
+        margin-right: 0;
+        margin-left: 80px;
+    }
+    to{
+        margin-left: 0;
+        margin-right: 80px;
+    }
+}
+#infinity{
+    margin: 50px;
+    height: 40px;
+    width: 40px;
+    animation: infinity 7s linear infinite;
+    background-image: linear-gradient(to top, #EECFBA, #C5DDE8);
+    border-radius: 50%;
+}
+@keyframes infinity {
+    from{
+        background-image: linear-gradient(to top, #EECFBA, #C5DDE8);
+        border-radius: 50%;
+    }
+    16.67%{
+        border-radius: 0;
+    }
+    33.34%{
+        background-image: linear-gradient(to top left, #F6EFD2, #CEAD78);
+    }
+    50.01%{
+        transform: matrix(1.4,0.9,0.2,1.4,30,10);
+    }
+    66.68%{
+        transform: rotate(180deg);
+    }
+    83.35%{
+        background-image: linear-gradient(to top right, #FBF2EB, #352A3B);
+    }
+    to{
+        background-image: linear-gradient(to top, #EECFBA, #C5DDE8);
+        border-radius: 50%;
+    }
+}

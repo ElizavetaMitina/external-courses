@@ -1,0 +1,16 @@
+#round{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+#figure{
+    height: 300px;
+    width: 300px;
+    clip-path: polygon(42% 41%, 56% 41%, 69% 20%, 76% 44%, 81% 61%, 92% 54%, 81% 60%, 92% 62%, 83% 61%, 92% 69%, 82% 61%, 70% 73%, 54% 80%, 33% 75%, 21% 60%, 11% 69%, 20% 60%, 11% 60%, 21% 59%, 12% 53%, 22% 59%, 28% 20%);
+}
+#mask{
+    height: 300px;
+    width: 200px;
+    -webkit-mask-image: url("pen.png");
+    -webkit-mask-size: 200px;
+}
