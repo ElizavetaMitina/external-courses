@@ -1,0 +1,29 @@
+p{
+    text-indent: 30px;
+}
+table{
+    width: 100%;
+    border: solid 1px black;
+}
+td{
+    border: solid 1px black;
+}
+th{
+    border: solid 1px black;
+}
+.technologies{
+    font-weight: bold;
+}
+.web{
+    text-indent: 20px;
+}
+#tech{
+    height: 140px;
+}
+#info{
+    height: 170px;
+    width: 450px;
+}
+caption{
+    align-self: center;
+}

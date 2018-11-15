@@ -1,0 +1,32 @@
+table{
+    width:100%;
+}
+thead{
+    text-align:left;
+    background-color: #b5dcb3;
+    border:1px;
+}
+#trID{
+    vertical-align: top;
+    background-color: #eee;
+    border:1px;
+    height: 100px;
+}
+tfoot{
+    background-color: #b5dcb3;
+}
+#MenuID{
+    background-color: #aaa;
+}
+div{
+    background-color: #eee;
+}
+iframe[name="myframe1"]{
+    visibility: hidden;
+    position: absolute;
+    top: 74px;
+    left: 318px;
+}
+a[href="menu.html"]:visited ~ iframe[name="myframe1"]{
+    visibility: visible;
+}
