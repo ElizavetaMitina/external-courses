@@ -5,7 +5,7 @@ body{
     font-family: Arial, Calibri, "Times New Roman";
 }
 #wrapper{
-    height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-rows: 45px 1fr 45px;
@@ -47,15 +47,17 @@ nav{
 }
 .wrap{
     background-color: rgb(31, 38, 56);
-    margin: 0.2rem 0;
+    padding: 0;
 }
 .wrap button{
     margin: 1.2rem 0.5rem;
 }
-.wrap div{
+.wrap li{
+    list-style-type: none;
     padding: 0.8rem 0.5rem;
 }
 .wrap button{
+    cursor: pointer;
     background-color: rgb(242, 121, 90);
     border: none;
     border-radius: 7px;
