@@ -1,0 +1,16 @@
+form{
+    margin: 40px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+span{
+    font-size: 12px;
+    font-family: Calibri, Arial, "Courier New";
+    color: blue;
+    margin-top: -100px;
+    visibility: hidden;
+}
+input:valid:focus + span { visibility: visible}

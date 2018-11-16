@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgb(131, 138, 158);
+    font-family: Arial, Calibri, "Times New Roman";
+}
+#wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 45px 1fr 45px;
+}
+header, footer{
+    background-color: rgb(48, 55, 74);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+header div, footer div{
+    padding: 0.9rem;
+}
+header div:last-of-type, footer div:last-of-type{
+    background-color: rgb(20, 164, 250);
+    color: white;
+    display: flex;
+}
+img[src="clouds.jpg"]{
+    height: 25px;
+    width: 25px;
+    background-size: contain;
+    align-self: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+header div:last-of-type i{
+    padding: 0 0 0 10px;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(26, 32, 46);
+    font-weight: lighter;
+}
+.wrap{
+    background-color: rgb(31, 38, 56);
+    padding: 0;
+}
+.wrap button{
+    margin: 1.2rem 0.5rem;
+}
+.wrap li{
+    list-style-type: none;
+    padding: 0.8rem 0.5rem;
+}
+.wrap button{
+    cursor: pointer;
+    background-color: rgb(242, 121, 90);
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    width: 140px;
+    color: white;
+    text-transform: uppercase;
+}
+.round{
+    display: flex;
+}
+i{
+    padding-right: 10px;
+}
+.round i{
+    font-size: 5px;
+    align-self: center;
+    padding: 0 12px 0 5px;
+}
+#first{
+    color: red;
+}
+#second{
+    color: orange;
+}
+#third{
+    color: darkturquoise;
+}
+#forth{
+    color: blueviolet;
+}
+.last{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 1rem;
+}
+.last div{
+    padding: 0;
+}
+.last i{
+    padding: 0 10px 0 7px;
+}
+.bold{
+    color: #b5b5b5;
+}
+.wrap:nth-of-type(1) li:hover{
+    background-color: rgb(20, 164, 250);
+    color: white;
+}
+footer{font-size: 1.1rem}
+footer div:last-of-type i{
+    padding: 0 8px;
+}

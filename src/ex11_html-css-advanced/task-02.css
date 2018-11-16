@@ -1,0 +1,153 @@
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 50px;
+}
+.loader div {
+    animation: load 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 32px 32px;
+}
+.loader div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: black;
+    margin: -3px 0 0 -3px;
+}
+.loader div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+.loader div:nth-child(1):after {
+    top: 50px;
+    left: 50px;
+}
+.loader div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+.loader div:nth-child(2):after {
+    top: 54px;
+    left: 45px;
+}
+.loader div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+.loader div:nth-child(3):after {
+    top: 57px;
+    left: 39px;
+}
+.loader div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+.loader div:nth-child(4):after {
+    top: 58px;
+    left: 32px;
+}
+.loader div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+.loader div:nth-child(5):after {
+    top: 57px;
+    left: 25px;
+}
+.loader div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+.loader div:nth-child(6):after {
+    top: 54px;
+    left: 19px;
+}
+.loader div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+.loader div:nth-child(7):after {
+    top: 50px;
+    left: 14px;
+}
+.loader div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+.loader div:nth-child(8):after {
+    top: 45px;
+    left: 10px;
+}
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#wrap{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.block{
+    height: 80px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: darksalmon;
+}
+#round{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: crimson;
+    margin: 0 40px;
+    animation: bounce 1s linear infinite;
+    align-self: center;
+}
+@keyframes bounce {
+    from{
+        margin-left: 0;
+        margin-right: 80px;
+    }
+    50%{
+        margin-right: 0;
+        margin-left: 80px;
+    }
+    to{
+        margin-left: 0;
+        margin-right: 80px;
+    }
+}
+#infinity{
+    margin: 50px;
+    height: 40px;
+    width: 40px;
+    animation: infinity 7s linear infinite;
+    background-image: linear-gradient(to top, #EECFBA, #C5DDE8);
+    border-radius: 50%;
+}
+@keyframes infinity {
+    from{
+        background-image: linear-gradient(to top, #EECFBA, #C5DDE8);
+        border-radius: 50%;
+    }
+    16.67%{
+        border-radius: 0;
+    }
+    33.34%{
+        background-image: linear-gradient(to top left, #F6EFD2, #CEAD78);
+    }
+    50.01%{
+        transform: matrix(1.4,0.9,0.2,1.4,30,10);
+    }
+    66.68%{
+        transform: rotate(180deg);
+    }
+    83.35%{
+        background-image: linear-gradient(to top right, #FBF2EB, #352A3B);
+    }
+    to{
+        background-image: linear-gradient(to top, #EECFBA, #C5DDE8);
+        border-radius: 50%;
+    }
+}
