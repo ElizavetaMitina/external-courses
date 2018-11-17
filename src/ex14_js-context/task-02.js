@@ -40,6 +40,16 @@ function Hangman(input) {
     this.getWrongSymbols = function () {
         console.log(this.errorSymbols);
         return this
+    };
+    this.startAgain = function (newWord) {
+        this.word = newWord.toLowerCase();
+        this.result = [];
+        this.errors = 6;
+        this.errorSymbols = [];
+        this.message = '';
+        for (let i = 0; i < this.word.length; i++){
+            this.result.push('_')
+        }
     }
 }
 module.exports = new Hangman;
