@@ -16,25 +16,25 @@ let Calculator = {
     },
     add: function (num) {
         if (num !== undefined) {
-            Calculator.result += num
+            this.result += num
         }
         return this
     },
     subtract: function (num) {
         if (num !== undefined) {
-            Calculator.result -= num
+            this.result -= num
         }
         return this
     },
     divide: function (num) {
         if (num !== undefined) {
-            Calculator.result /= num
+            this.result /= num
         }
         return this
     },
     multiply: function (num) {
         if (num !== undefined) {
-            Calculator.result *= num
+            this.result *= num
         }
         return this
     },

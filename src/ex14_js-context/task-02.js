@@ -10,7 +10,7 @@ function Hangman(input) {
     }
     this.guess = function (letter) {
         let index = this.word.indexOf(letter);
-        if(~index){ //'~' читается как «не минус один», а "if ~str.indexOf" читается как "если найдено"
+        if(index !== -1){
             this.result = this.word.split('').map(function (item,i){
                 if(item === letter){
                     return letter
