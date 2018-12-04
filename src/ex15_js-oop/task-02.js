@@ -1,52 +1,47 @@
 'use strict';
-let appliance = {
-    applianceName: 'appliance',
-    power: 0,
-    turnOn: false,
-    set name(newValue){
-        if(newValue){
-            this.applianceName = newValue;
-        }
-    },
-    get name(){
-        return this.applianceName;
-    },
-    set changePower(newValue){
-        if (newValue > 0){
-            this.power = newValue;
-        }
-    },
-    set changeTurnOn(newValue){
-        this.turnOn = !!newValue;
+const Appliance = function (name, power, turnOn) {
+    this.name = name;
+    this.power = power;
+    this.turnOn = turnOn;
+};
+Appliance.prototype.setName = function(newValue){
+    if(newValue){
+        this.name = newValue;
     }
 };
-let lamp = Object.create(appliance);
-lamp.name = 'lamp';
-lamp.changePower = 20;
-lamp.changeTurnOn = true;
-let toaster = Object.create(appliance);
-toaster.name = 'toaster';
-toaster.changePower = 45;
-let tv = Object.create(appliance);
-tv.name = 'tv';
+Appliance.prototype.getName = function(){
+    return this.name
+};
+Appliance.prototype.changePower = function (newValue) {
+    if (newValue > 0){
+        this.power = newValue;
+    }
+};
+Appliance.prototype.changeTurnOn = function (newValue) {
+    this.turnOn = !!newValue;
+};
+let lamp = new Appliance('lamp', 20, true);
+let toaster = new Appliance('toaster', 45, false);
+let tv = new Appliance('tv');
 tv.changePower = 110;
 tv.changeTurnOn = true;
-let room = {
-    appliances: [lamp, toaster, tv],
-    countPower: function () {
-        let power = 0;
-        room.appliances.forEach(function (item) {
-            if (item.turnOn === true) {
-                power += item.power;
-            }
-        });
-        return power;
-    },
-    search: function (name) {
-        return room.appliances.some(function (item) {
-            return item.name === name;
-        });
-    },
+const Room = function(appliances){
+    this.appliances = appliances;
 };
-console.log(room.countPower());
-console.log(room.search('lamp'));
+Room.prototype.countPower = function () {
+    let power = 0;
+    this.appliances.forEach(function (item) {
+        if (item.turnOn === true) {
+            power += item.power;
+        }
+    });
+    return power;
+};
+Room.prototype.search = function(name){
+    return this.appliances.some(function (item) {
+        return item.name === name;
+    });
+};
+let myRoom = new Room([lamp, toaster, tv]);
+console.log(myRoom.countPower());
+console.log(myRoom.search('lamp'));
