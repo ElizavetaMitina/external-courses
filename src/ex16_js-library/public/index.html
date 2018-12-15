@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/task-04.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="shadow"></div>
+<div id="wrapper">
+    <header>
+        <div>Help center</div>
+        <div>Our support</div>
+        <div><img src="css/clouds.jpg" alt="John">John Doe<i class="fa fa-check-circle" aria-hidden="true"></i></div>
+    </header>
+    <nav>
+        <div class="wrap"><button id="add"><i class="fa fa-plus" aria-hidden="true"></i> Add a book</button></div>
+        <ul class="wrap">
+            <li><i class="fa fa-book" aria-hidden="true"></i>Now reading</li>
+            <li><i class="fa fa-globe" aria-hidden="true"></i>Browse</li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy books</li>
+            <li><i class="fa fa-star" aria-hidden="true"></i>Favourite books</li>
+            <li><i class="fa fa-list" aria-hidden="true"></i>Wishlist</li>
+            <li><i class="fa fa-clock-o" aria-hidden="true"></i>History</li>
+        </ul>
+        <ul class="wrap">
+            <li class="round"><i class="fa fa-circle" aria-hidden="true" id="first"></i>Must Read titles</li>
+            <li class="round"><i class="fa fa-circle" aria-hidden="true" id="second"></i>Best Of List</li>
+            <li class="round"><i class="fa fa-circle" aria-hidden="true" id="third"></i>Classic Novels</li>
+            <li class="round"><i class="fa fa-circle" aria-hidden="true" id="forth"></i>Non Fiction</li>
+        </ul>
+        <div class="wrap last">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <div>
+                <span>You added</span>
+                <span class="bold">Fight Cub</span>
+                <span>by</span>
+                <span class="bold">Chuck Palahniuk</span>
+                <span>to your</span>
+                <span class="bold">Must Read Titles</span>
+                <p>24 minutes ago</p>
+            </div>
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <div>
+                <span>You added</span>
+                <span class="bold">The Trial</span>
+                <span>by</span>
+                <span class="bold">Franz Kafka</span>
+                <span>to your</span>
+                <span class="bold">Must Read Titles</span>
+                <p>48 minutes ago</p>
+            </div>
+        </div>
+    </nav>
+    <div id="library">
+        <div id="logo">Browse Available Books</div>
+        <div id="sorting">
+            <div id="sign">
+                <button id="all">All books</button>
+                <button id="recent">Most Recent</button>
+                <button id="popular">Most Popular</button>
+                <button id="free">Free Books</button>
+            </div>
+            <form id="searchForm">
+                <input type="search" name="search" placeholder="Enter Keywords" onkeyup="searchBook()">
+                <button id="searchButton" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        <div id="books"></div>
+        <div id="message">Книга успешно добавлена!</div>
+        <div id="addWindow">
+            <form id="addForm">
+                <h2 id="slogan">Add your book</h2>
+                <div id="grid-container">
+                    <p>Title:</p>
+                    <input type="text" name="title" title="Enter title of book" placeholder=" Book name" required>
+                    <p>Author:</p>
+                    <input type="text" name="author" title="Enter author of book" placeholder=" Author" required>
+                    <p>Price:</p>
+                    <input type="text" name="price" title="Enter link to your website" placeholder=" Price" required>
+                    <p>Created at:</p>
+                    <input type="text" name="created_at" title="Enter link to your website" placeholder=" Created at" required>
+                </div>
+                <div class="buttons">
+                    <button id="addButton" type="button">Submit</button>
+                    <button id="deleteButton" type="button">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div><i class="fa fa-question-circle" aria-hidden="true"></i></div>
+        <div><i class="fa fa-cog" aria-hidden="true"></i></div>
+    </footer>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

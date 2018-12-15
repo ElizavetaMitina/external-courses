@@ -1,0 +1,276 @@
+body{
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgb(131, 138, 158);
+    font-family: Arial, Calibri, sans-serif;
+}
+button{
+    outline: none;
+    cursor: pointer;
+}
+#wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 45px 1fr 45px;
+}
+header, footer{
+    background-color: rgb(48, 55, 74);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+header div, footer div{
+    padding: 0.9rem;
+}
+header div:last-of-type, footer div:last-of-type{
+    background-color: rgb(20, 164, 250);
+    color: white;
+    display: flex;
+}
+img[src="css/clouds.jpg"]{
+    height: 25px;
+    width: 25px;
+    background-size: contain;
+    align-self: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+header div:last-of-type i{
+    padding: 0 0 0 10px;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(26, 32, 46);
+    font-weight: lighter;
+}
+.wrap{
+    background-color: rgb(31, 38, 56);
+    padding: 0;
+    margin: 0.2rem 0;
+}
+.wrap li{
+    list-style-type: none;
+    padding: 0.7rem 0.5rem;
+}
+.wrap button{
+    margin: 1.2rem 0.5rem;
+    background-color: rgb(242, 121, 90);
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    width: 170px;
+    color: white;
+    text-transform: uppercase;
+}
+.round{
+    display: flex;
+}
+i{
+    padding-right: 10px;
+}
+.round i{
+    font-size: 5px;
+    align-self: center;
+    padding: 0 12px 0 5px;
+}
+#first{
+    color: red;
+}
+#second{
+    color: orange;
+}
+#third{
+    color: darkturquoise;
+}
+#forth{
+    color: blueviolet;
+}
+.last{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 1rem;
+}
+.last div{
+    padding: 0;
+}
+.last i{
+    padding: 0 10px 0 7px;
+}
+.bold{
+    color: #b5b5b5;
+}
+.wrap:nth-of-type(1) li:hover{
+    background-color: rgb(20, 164, 250);
+    color: white;
+}
+footer{font-size: 1.1rem}
+footer div:last-of-type i{
+    padding: 0 8px;
+}
+#library{
+    display: grid;
+    grid-template-rows: 3rem 2.6rem 1fr;
+}
+#logo, #sorting{
+    background-color: rgb(238,241,238);
+    border-bottom: 1px solid rgb(199, 202, 199);
+}
+#logo{
+    font-size: 1.3rem;
+    padding: 0.9rem;
+    color: rgb(64,71,90);
+}
+#sorting{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#sorting div{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+#sorting button{
+    border: none;
+    background-color: inherit;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 3px 8px;
+    cursor: pointer;
+    color: #909090;
+}
+#sign button:hover{
+    background-color: rgb(150, 179, 209);
+    color: white;
+}
+#searchForm{
+    border: 1px solid rgb(199, 202, 199);
+    border-radius: 14px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 400px;
+    height: 26px;
+}
+input[type=search]{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    min-width: 200px;
+}
+#searchButton{
+    background-color: inherit;
+    border: none;
+    padding: 0 0 0 5px;
+}
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 10px;
+}
+#books .title{
+    color: #6c6c6c;
+    height: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+#books div{
+    max-height: 360px;
+    margin: 0 12px 10px 12px;
+}
+#grid-container{
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 4fr;
+}
+#addWindow{
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(182, 0, 0, 0.53);
+    color: white;
+    font-weight: bold;
+    margin: 10% 20%;
+    padding: 1rem;
+    display: none;
+}
+h2{
+    margin: 0;
+}
+#grid-container input{
+    height: 30px;
+    outline: none;
+    align-self: center;
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.89);
+}
+#addButton, #deleteButton{
+    height: 30px;
+    width: 120px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgba(229, 158, 158, 0.91);
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+#shadow{
+    z-index: 1;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 141vh;
+    background-color: rgba(0, 0, 0, 0.69);
+}
+#books > div:hover{
+    background-color: rgba(181, 181, 181, 0.37);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.wrapStars{
+    display: flex;
+    color: goldenrod;
+}
+
+.wrapStars > i{
+    padding: 0;
+}
+
+.wrapStars:hover i:before {
+    content: "\f005";
+}
+
+.wrapStars:hover i:hover:before {
+    content: "\f005";
+}
+
+.wrapStars:hover i:hover ~ i:before {
+    content: "\f006";
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+#message{
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.72);
+    font-size: 2rem;
+    display: none;
+    padding: 20px;
+    margin: 10% 0 0 20%;
+}
